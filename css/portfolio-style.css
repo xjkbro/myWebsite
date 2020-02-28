@@ -273,6 +273,7 @@ header > h1 > a {
         font-size: 2.4rem;
         text-align: left;
     }
+    
 }
 .section {
     margin: auto;
@@ -324,6 +325,12 @@ header > h1 > a {
         width: 75%;
         height: 600px;
         border-radius: 50%;
+    }
+    .section {
+        margin: auto;
+        padding: 125px 0;
+        width: 90%;
+        height: fit-content;
     }
 }
 
