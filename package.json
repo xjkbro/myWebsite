@@ -1,0 +1,23 @@
+{
+  "name": "myWebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xjkbro/myWebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://xjkbro.github.io/myWebsite/",
+  "bugs": {
+    "url": "https://github.com/xjkbro/myWebsite/issues"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
