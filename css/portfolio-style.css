@@ -60,32 +60,42 @@ header > h1 > a {
     transition: all 0.2s ease-in;
 
 }
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1100px) {
+    header {
+        height: 110px;
+        z-index: 2;
+    }
+    
+    header > h1{
+        margin: 10px 10px 10px 25px;
+        font-size: 4rem;
+    }
+    
     .toggler {
         visibility: visible;
         display: block;
         position: fixed;
         top: 0;
         right: 0;
-        z-index: 1;
+        z-index: 2;
     }
     .nav .toggler {
         position: absolute;
         top: 5px;
         right: 5px;
-        z-index: 2;
+        z-index: 3;
         cursor: pointer;
-        width: 50px;
-        height: 50px;
-        opacity: .3;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
     }
     .nav .hamburger {
         position: absolute;
         top: 0;
         right: 0;
-        z-index: 1;
-        width: 60px;
-        height: 60px;
+        z-index: 2;
+        width: 110px;
+        height: 110px;
         padding: 1rem;
         background: coral;
         display: flex;
@@ -96,7 +106,7 @@ header > h1 > a {
     .nav .hamburger > div {
         position: relative;
         width: 100%;
-        height: 2px;
+        height: 10px;
         background-color: #fff;
         display: flex;
         align-items: center;
@@ -108,35 +118,37 @@ header > h1 > a {
     .nav .hamburger > div:after {
         content: '';
         position: absolute;
-        z-index: 1;
-        top: -10px;
+        z-index: 2;
+        top: -30px;
         width: 100%;
-        height: 2px;
+        height: 10px;
         background: inherit;
     }
     /* Moves line down  */
     .nav .hamburger > div:after {
-        top: 10px;
+        top: 30px;
     }
     #navbar > a {
         background-color: white;
         text-decoration:none;
-        color: #333; 
-        font-size: 20px;
+        color: #333;
+        font-size: 3rem;
         border-radius: 0;
         box-shadow: unset;
     }
+    
     #navbar {
         float: none;
         display: flex;
         flex-direction: column;
         align-content: center;
         justify-content: center;
+        width: 100vh;
         padding: 0;
+        z-index: 1;
         visibility: visible;
-        transform: scaleX(0) scaleY(0);
-        transform-origin: right top;
-
+        transform: scaleY(0);
+        transform-origin:  top;
         transition: all 0.4s ease;
     }
     .nav .toggler:checked ~  #navbar {
@@ -148,11 +160,6 @@ header > h1 > a {
         transition-duration: 0.4s;
     }
     
-    box-shadow: 1px 2px 10px #222;
-
-    header > h1{
-        display:none;
-    }
 }
 
 #showcase {
@@ -259,6 +266,13 @@ header > h1 > a {
     .container {
         width: 95vw;
     }
+    .container h1 {
+        font-size: 4rem;
+    }
+    .container  p {
+        font-size: 2.4rem;
+        text-align: left;
+    }
 }
 .section {
     margin: auto;
@@ -317,6 +331,9 @@ header > h1 > a {
 
 .edu-info {
     height: auto;
+}
+#education > h1 {
+    padding-bottom: 20px;
 }
 .edu-info > h5 {
     font-style: italic;
@@ -435,11 +452,14 @@ header > h1 > a {
 }
 
 @media all and (max-width: 1200px) {
-.grid {
-    grid-gap: 50px;
+    .grid {
+        grid-gap: 50px;
+        grid-template-columns: 1fr ;
 
-    grid-template-columns: 1fr 1fr;
-
+    }
+    .lang-skills, .lang-skills > i {
+        font-size: 1rem;
+        padding: 5%;
     }
 }
 
@@ -475,6 +495,17 @@ header > h1 > a {
     padding: 10px;
     text-indent: 5%;
 }
+
+@media all and (max-width: 1200px){
+    #projects > div > p {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .project-display {
+        max-width: 100%;
+    }
+
+}
 #contact > h1 {
     padding-bottom: 10px;
 }
@@ -507,5 +538,13 @@ textarea {
 footer {
     background-color: coral;
     padding: 30px;
+    margin: auto;
     text-align: center;
+}
+@media all and(max-width: 1200px)
+{
+    footer > p{
+        text-align: center;
+        font-size: 1rem;
+    }
 }
