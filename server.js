@@ -31,10 +31,10 @@ app.post('/email', (req, res) => {
     const { first, last, email, select, subject, message } = req.body;
     console.log('Data: ', first);
 
-    // app.use(rateLimit({
-    //     windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
-    //     max: 1
-    // }));
+    app.use(rateLimit({
+        windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
+        max: 1
+    }));
 
 
     //sendMail(data.first, data.last, data.email, data.select, data.subject, data.message);
