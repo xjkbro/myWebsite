@@ -24,17 +24,17 @@
             <div class="row form-group">
                 <div class="col">
                     <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" placeholder="John">
+                    <input type="text" id="firstName" class="form-control" placeholder="John">
                 </div>
                 <div class="col">
                     <label for="lastName">First Name</label>
-                    <input type="text" class="form-control" placeholder="Smith">
+                    <input type="text" id="lastName" class="form-control" placeholder="Smith">
                 </div>
             </div>
             <div class="form-group">
                 <label for="emailAddress">Email address</label>
                 <input type="email" placeholder="name@example.com" class="form-control" id="emailAddress"
-                    aria-describedby="emailHelp">
+                    aria-describedby="emailHelp" required>
                 <small id="emailHelp" class="form-text text-muted">I will never share your email with anyone
                     else. Will be used only to contact you back.</small>
             </div>
@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col">
                     <label for="subject">Subject</label>
-                    <input type="text" class="form-control" placeholder="Subject">
+                    <input type="text" id="subject" class="form-control" placeholder="Subject">
                 </div>
             </div>
             <div class="form-group">
@@ -76,5 +76,37 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script>
+    $('form').on('submit', (e) => {
+        e.preventDefault();
+        const first = $('#firstName').val().trim();
+        const last = $('#lastName').val().trim();
+        const email = $('#emailAddress').val().trim();
+        const select = $('#inquirySelect').val().trim();
+        const subject = $('#subject').val().trim();
+        const message = $('#messageBody').val().trim();
+
+        const data = {
+            first,
+            last,
+            email,
+            select,
+            subject,
+            message
+        };
+
+        $.post('/email', data)
+            .then(() => {
+                window.location.href = "/email/sent";
+            })
+            .catch(() => {
+                window.location.href = "/error";
+            });
+
+
+    });
+
+</script>
 
 </html>
