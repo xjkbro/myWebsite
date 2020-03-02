@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/brochure-style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -43,7 +45,7 @@
 
     </div>
 
-    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0;">
+    <div data-aos="fade-up" class="jumbotron jumbotron-fluid" style="margin-bottom: 0;">
         <div class="container">
             <br />
             <div class="container">
@@ -59,7 +61,7 @@
     </div>
     <div class="parallax"></div>
 
-    <div class="container" id="features" style="padding: 3rem;">
+    <div data-aos="fade-up" class="container" id="features" style="padding: 8rem; ">
         <br />
         <div class="display-4 ta-c" style="padding-bottom: 50px;">Features</div>
         <div class="row">
@@ -85,18 +87,18 @@
     </div>
 
 
-    <div class="jumbotron jumbotron-fluid">
+    <div data-aos="fade-up" class="jumbotron jumbotron-fluid">
         <div class="container ta-r">
 
             <h1 class="display-4">Projects
             </h1>
-            <p class="lead"> View more <a href="./portfolio.html">here</a>.</p>
+            <p class="lead"> View more <a href="portfolio.html">here</a>.</p>
 
         </div>
         <br>
     </div>
 
-    <div class="container" id="pricing" style="padding: 3rem;">
+    <div data-aos="fade-up" class="container" id="pricing" style="padding: 8rem;">
         <br />
         <div class="display-4 ta-c">Pricing</div>
         <p class="ta-c" style="padding: 10px 10% 50px 10% ; ">Provide a description of the project in an email and we
@@ -149,12 +151,12 @@
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-fluid" style="margin-bottom: 0;">
+    <div data-aos="fade-up" class="jumbotron jumbotron-fluid" style="margin-bottom: 0; ">
         <div class="container">
 
             <h1 class="display-4">Contact
             </h1>
-            <p class="lead"> For any inquiries click <a href="./contact.html">here</a>.</p>
+            <p class="lead"> For any inquiries click <a href="contact.html">here</a>.</p>
 
         </div>
         <br>
@@ -178,5 +180,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>

@@ -1,5 +1,5 @@
 {
-    "name": "myWebsite",
+    "name": "mywebsite",
     "version": 2,
     "builds": [
         {
@@ -14,7 +14,7 @@
         }
     ],
     "env": {
-        "MAILGUN_API_KEY": "@mailgunAPI",
-        "MAILGUN_DOMAIN": "@mailgunDOMAIN"
+        "MAILGUN_API_KEY": "@mailgun_api_key",
+        "MAILGUN_DOMAIN": "@mailgun_domain"
     }
 }

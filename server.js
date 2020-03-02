@@ -1,5 +1,6 @@
 const express = require('express');
 const sendMail = require('./mail');
+const logger = require('./middleware/logger');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
@@ -9,15 +10,19 @@ const app = express();
 const path = require('path');
 const PORT = 8080;
 
+//Initialize Logger Middleware
+app.use(logger);
+
+
+app.use(express.static(path.join(__dirname, 'dist')));
+
+
 app.use(express.urlencoded({
     extended: false
 }));
 app.use(express.json());
 
-app.use(rateLimit({
-    windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
-    max: 1
-}));
+
 
 app.post('/email', (req, res) => {
 
@@ -25,6 +30,12 @@ app.post('/email', (req, res) => {
 
     const { first, last, email, select, subject, message } = req.body;
     console.log('Data: ', first);
+
+    // app.use(rateLimit({
+    //     windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
+    //     max: 1
+    // }));
+
 
     //sendMail(data.first, data.last, data.email, data.select, data.subject, data.message);
     sendMail(first, last, email, select, subject, message, function (err, data) {
@@ -37,9 +48,27 @@ app.post('/email', (req, res) => {
     });
 });
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'contact.html'));
+function handleRedirect(req, res) {
+    // console.log(req);
+    const targetUrl = `${req.protocol}://${req.get('host')}`;
+    if (req.originalUrl != 'index.html')
+        targetUrl = targetUrl + req.originalUrl;
+    res.redirect(targetUrl);
+}
+
+app.get('/email/sent', (req, res) => {
+    const targetUrl = `${req.protocol}://${req.get('host')}`;
+    res.redirect(targetUrl);
 });
+app.get('/error', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'error.html'));
+    setTimeout(5000);
+    handleRedirect(req, res);
+});
+
+
+
+
 app.listen(PORT, () => {
     console.log('Server is starting on PORT: ' + PORT);
 });
