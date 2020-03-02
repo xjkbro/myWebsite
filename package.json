@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "deploy": "gh-pages -d dist",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "nodemon ."
   },
   "repository": {
     "type": "git",
