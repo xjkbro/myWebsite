@@ -22,6 +22,31 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
+function handleRedirect(req, res) {
+    // console.log(req);
+    const targetUrl = `${req.protocol}://${req.get('host')}`;
+    if (req.originalUrl != 'index.html')
+        targetUrl = targetUrl + req.originalUrl;
+    res.redirect(targetUrl);
+}
+
+
+
+app.use(rateLimit({
+    windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
+    max: 2
+}));
+
+app.get('/error', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dist', 'error.html'));
+    setTimeout(5000);
+    handleRedirect(req, res);
+});
+app.get('/email/sent', (req, res) => {
+    const targetUrl = `${req.protocol}://${req.get('host')}`;
+    res.redirect(targetUrl);
+});
+
 
 
 app.post('/email', (req, res) => {
@@ -29,12 +54,8 @@ app.post('/email', (req, res) => {
     // console.log('Data: ', req.body);
 
     const { first, last, email, select, subject, message } = req.body;
-    console.log('Data: ', first);
+    // console.log('Data: ', first);
 
-    app.use(rateLimit({
-        windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
-        max: 1
-    }));
 
 
     //sendMail(data.first, data.last, data.email, data.select, data.subject, data.message);
@@ -48,23 +69,12 @@ app.post('/email', (req, res) => {
     });
 });
 
-function handleRedirect(req, res) {
-    // console.log(req);
-    const targetUrl = `${req.protocol}://${req.get('host')}`;
-    if (req.originalUrl != 'index.html')
-        targetUrl = targetUrl + req.originalUrl;
-    res.redirect(targetUrl);
-}
 
-app.get('/email/sent', (req, res) => {
-    const targetUrl = `${req.protocol}://${req.get('host')}`;
-    res.redirect(targetUrl);
-});
-app.get('/error', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'error.html'));
-    setTimeout(5000);
-    handleRedirect(req, res);
-});
+
+
+
+
+
 
 
 
