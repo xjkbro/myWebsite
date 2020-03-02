@@ -20,6 +20,9 @@ body {
     overflow: hidden;
     padding: 0 3rem;
 }
+.bttn:hover {
+    color: white;
+}
 
 .showcase {
     background-color: var(--primary-color);
