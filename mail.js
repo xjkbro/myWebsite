@@ -10,6 +10,7 @@ const mg = {
     }
 };
 
+const myEmail = process.env.EMAIL;
 
 const transporter = nodemailer.createTransport(mailGun(mg));
 
@@ -17,7 +18,7 @@ const sendMail = (first, last, email, select, subject, message, cb) => {
 
     const mailOptions = {
         from: `${email}`,
-        to: 'inquiries@jkdelara.com',
+        to: myEmail,
         subject: `'${subject}' by ${first} ${last}`,
         text:
             `Inquiry: ${first} ${last} - ${select} 

@@ -22,43 +22,33 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 
-function handleRedirect(req, res) {
-    // console.log(req);
-    const targetUrl = `${req.protocol}://${req.get('host')}`;
-    if (req.originalUrl != 'index.html')
-        targetUrl = targetUrl + req.originalUrl;
-    res.redirect(targetUrl);
-}
+// function handleRedirect(req, res) {
+//     // console.log(req);
+//     const targetUrl = `${req.protocol}://${req.get('host')}`;
+//     if (req.originalUrl != 'index.html')
+//         targetUrl = targetUrl + req.originalUrl;
+//     res.redirect(targetUrl);
+// }
 
 
 // Possible no use with mailgun bounces to avoid spam.
+
 app.use(rateLimit({
     windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
-    max: 6
+    max: 4
 }));
 
 app.get('/error', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist', 'error.html'));
-    setTimeout(5000);
-    handleRedirect(req, res);
+    console.log(req);
 });
 app.get('/email/sent', (req, res) => {
     const targetUrl = `${req.protocol}://${req.get('host')}`;
     res.redirect(targetUrl);
 });
 
-
-
 app.post('/email', (req, res) => {
-
-    // console.log('Data: ', req.body);
-
     const { first, last, email, select, subject, message } = req.body;
-    // console.log('Data: ', first);
-
-
-
-    //sendMail(data.first, data.last, data.email, data.select, data.subject, data.message);
     sendMail(first, last, email, select, subject, message, function (err, data) {
         if (err) {
             console.log('ERROR: ', err);
