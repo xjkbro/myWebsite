@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 
 const path = require('path');
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 //Initialize Logger Middleware
 app.use(logger);
@@ -34,7 +34,7 @@ function handleRedirect(req, res) {
 // Possible no use with mailgun bounces to avoid spam.
 app.use(rateLimit({
     windowMs: 12 * 60 * 60 * 1000,      //limit a submission every 12 hrs
-    max: 2
+    max: 6
 }));
 
 app.get('/error', (req, res) => {
