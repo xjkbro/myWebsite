@@ -1,0 +1,73 @@
+/* 
+html,body{
+    height:100vh;
+ }
+
+ .carousel,.item,.active{
+    height:100vh;
+
+  }
+ .carousel-inner{
+    height:100vh;
+ }
+
+ .carousel-caption{
+    
+ }
+ .o-40{
+     background-color: #e9ecef67 !important;
+     bottom: 45vh !important;
+ }
+ .text-black {
+     color: black !important;
+ }
+
+ #indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+} */
+
+.parallax-1, .parallax-2, .parallax-3, .parallax-5, .parallax-7 , .parallax-9 {
+    /* The image used */
+    background-image: url("../img/about.jpeg");
+  
+    /* Set a specific height */
+    height: 100px;
+    max-width: 100vw;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.parallax-2 {
+    height: 200px;
+}
+.parallax-3 {
+    height: 300px;
+}
+.parallax-5 {
+    height: 500px;
+}
+.parallax-7 {
+    height: 700px;
+}
+.parallax-9 {
+    height: 900px;
+}
+
+
+.ta-c {
+    text-align: center;
+}
+.ta-r {
+    text-align: right;
+}
+.ta-l {
+    text-align: left;
+}

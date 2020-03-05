@@ -491,11 +491,20 @@ header > h1 > a {
     
 
 }
-.project-display > img {
+.project-display > img,.project-display > iframe {
     max-width: 100%;
     display: block;
     height: auto;
     margin: auto;
+}
+
+.section .iframe-display {
+    max-width: 75vw;
+    /* height: 100vh; */
+    display: block;
+    border: none;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .project-display > p {
