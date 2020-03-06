@@ -36,7 +36,7 @@ html,body{
   
     /* Set a specific height */
     height: 100px;
-    max-width: 100%;
+    max-width: 100% !important;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;

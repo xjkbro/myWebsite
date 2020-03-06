@@ -4,7 +4,7 @@
   
     /* Set a specific height */
     height: 100px;
-    width: 100%;
+    width: 100vw !important;
   
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
