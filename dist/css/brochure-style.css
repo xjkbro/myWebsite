@@ -41,9 +41,16 @@
 }
 
 
-@media all and (max-width: 600px) {
-    .parallax-1, .parallax-2, .parallax-3, .parallax-5, .parallax-7 , .parallax-9 {
+@media all and (max-width: 900px) {
+     .parallax-5, .parallax-7 , .parallax-9 {
         height: 900px;
         width: 100vw;
+    background-image: url("../img/showcase_mob.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+
     }
 }
