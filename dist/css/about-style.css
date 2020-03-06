@@ -36,6 +36,7 @@ html,body{
   
     /* Set a specific height */
     height: 100px;
+    max-height: fit-content;
     max-width: 100% !important;
   
     /* Create the parallax scrolling effect */
