@@ -4,6 +4,7 @@
   
     /* Set a specific height */
     height: 100px;
+    max-height: auto;
     width: 100vw !important;
   
     /* Create the parallax scrolling effect */
