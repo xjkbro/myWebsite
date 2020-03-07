@@ -72,3 +72,13 @@ html,body{
 .ta-l {
     text-align: left;
 }
+
+/* @media all and (min-width: 2000px)
+ {
+    .parallax-7 {
+        height: 1000px;
+    }
+     * {
+         font-size: 1.6rem;
+     }
+ } */
