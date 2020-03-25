@@ -6,7 +6,8 @@
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "nodemon server.js",
-    "build": "nodem ."
+    "build": "nodem .",
+    "now": "git add . & git commit -m 'update website' & git push"
   },
   "repository": {
     "type": "git",
