@@ -6,11 +6,11 @@
 
 * {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
 }
 body {
+    font-family: "Roboto", sans-serif;
     line-height: 1.4;
 }
 .container {
@@ -83,10 +83,6 @@ div > a > i {
     margin: 0 20px;
     transition: ease-in 100ms;
 }
-i:hover {
-    transform: scale(2.3);
-    transition: ease-in 100ms;
-}
 .badges {
     position: fixed;
     bottom: 5vh;
@@ -95,36 +91,14 @@ i:hover {
     position: fixed;
     top: 5vh;
 }
-.navBadges > span {
-    font-size: 1rem;
-    transition: ease-in 100ms;
-    padding: 1rem;
-}
-span:hover {
+.navBadges > span:hover {
     cursor: pointer;
     transform: scale(2.3);
-    font-size: 1.1rem;
     transition: ease-in 100ms;
 }
-button:hover {
-    transform: scale(1);
+i:hover {
+    transform: scale(2.3);
     transition: ease-in 100ms;
-}
-button:hover {
-    transform: scale(1.1);
-    transition: ease-in 100ms;
-}
-
-/* HIDE/SHOW STYLES */
-#content-about,
-#contentHome {
-    background: yellow;
-    color: red;
-    padding: 16px;
-    margin-bottom: 10px;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.6s ease opacity, 0.6s ease transform;
 }
 
 @media all and (max-width: 900px) {
@@ -135,16 +109,6 @@ button:hover {
     }
     i:hover {
         transform: scale(1.8);
-        transition: ease-in 100ms;
-    }
-
-    .navBadges > span {
-        font-size: 0.5rem;
-        transition: ease-in 100ms;
-    }
-    span:hover {
-        cursor: pointer;
-        font-size: 0.6rem;
         transition: ease-in 100ms;
     }
 }
