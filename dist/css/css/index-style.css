@@ -1,14 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 :root {
     --primary-color: rgba(190, 182, 63, 0.226);
-    --overlay-color: rgb(255, 175, 2);
+    --overlay-color: rgba(255, 127, 80, 0.479);
     --menu-speed: 0.75s;
 }
 
 * {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", "Roboto", sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 body {
     line-height: 1.4;
@@ -21,15 +24,17 @@ body {
 }
 .bttn:hover {
     color: white;
-    background-color: var(--primary-color);
+    background-color: var(--overlay-color);
     opacity: 0.7;
 }
 
 .showcase {
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     color: #fff;
     height: 100vh;
     position: relative;
+    overflow: hidden;
+    margin: auto;
 }
 
 .showcase:before {
@@ -52,8 +57,13 @@ body {
     height: 100%;
 }
 
-.showcase h1 {
+.title-head {
     font-size: 4rem;
+    font-weight: 300;
+}
+.section-head {
+    font-size: 3.5rem;
+    font-weight: 300;
 }
 
 .showcase p {
@@ -79,6 +89,7 @@ div > a:hover {
     color: white;
 }
 div > a > i {
+    line-height: 3 !important;
     transform: scale(2);
     margin: 0 20px;
     transition: ease-in 100ms;
@@ -88,24 +99,32 @@ i:hover {
     transition: ease-in 100ms;
 }
 .badges {
-    position: fixed;
-    bottom: 5vh;
+    margin: 50px 0;
 }
 .navBadges {
     position: fixed;
-    top: 5vh;
+    width: 650px;
+    height: 100px;
+    top: 15%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -325px; /* Negative half of width. */
+
+    z-index: 2;
+    text-align: center;
 }
-.navBadges > span {
+.navBadges > button {
     font-size: 1rem;
     transition: ease-in 100ms;
-    padding: 1rem;
+    padding: 0 0;
+    margin: 0 1.1rem;
 }
-span:hover {
+/* span:hover {
     cursor: pointer;
     transform: scale(2.3);
     font-size: 1.1rem;
     transition: ease-in 100ms;
-}
+} */
 button:hover {
     transform: scale(1);
     transition: ease-in 100ms;
@@ -114,18 +133,11 @@ button:hover {
     transform: scale(1.1);
     transition: ease-in 100ms;
 }
+.text-shad {
+    text-shadow: 2px 1px 5px #272727;
+}
 
 /* HIDE/SHOW STYLES */
-#content-about,
-#contentHome {
-    background: yellow;
-    color: red;
-    padding: 16px;
-    margin-bottom: 10px;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.6s ease opacity, 0.6s ease transform;
-}
 
 @media all and (max-width: 900px) {
     div > a > i {
@@ -142,9 +154,20 @@ button:hover {
         font-size: 0.5rem;
         transition: ease-in 100ms;
     }
-    span:hover {
+    .navBadges {
+        display: none;
+    }
+    .title-head,
+    .section-head {
+        font-size: 2rem;
+    }
+    /* span:hover {
         cursor: pointer;
         font-size: 0.6rem;
         transition: ease-in 100ms;
+    } */
+    p {
+        text-align: center;
+        font-size: 0.9rem !important;
     }
 }
