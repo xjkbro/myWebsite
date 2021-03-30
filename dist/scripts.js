@@ -1,8 +1,8 @@
-let name = new Typewriter("#typed-name", {
+let myName = new Typewriter("#typed-name", {
     autoStart: true,
     delay: 75,
 });
-name.typeString("Jason-Kyle De Lara").start();
+myName.typeString("Jason-Kyle De Lara").start();
 
 let title = new Typewriter("#typed-title", {
     loop: true,
