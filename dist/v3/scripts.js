@@ -30,9 +30,9 @@ let about = new Typewriter("#typed-about", {
 });
 about
     .pauseFor(1000)
-    .typeString(
-        "Hello, I'm Jason and I like to create things. Let's Build Something together! =)"
-    )
+    .typeString("Hello, I'm Jason and I like to create things. ")
+    .pauseFor(1000)
+    .typeString("Let's Build Something together! =)")
     .start();
 
 // var typewriter = new Typewriter("#typed-name", {
