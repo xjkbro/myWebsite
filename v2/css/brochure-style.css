@@ -1,0 +1,69 @@
+.parallax-1, .parallax-2, .parallax-3, .parallax-5, .parallax-7 , .parallax-9 {
+    /* The image used */
+    -moz-background-image: url("../img/showcase.jpg");
+    -webkit-background-image: url("../img/showcase.jpg");
+    background-image: url("../img/showcase.jpg");
+
+  
+    /* Set a specific height */
+    height: 100px;
+    width: 100vw;
+  
+    /* Create the parallax scrolling effect */
+    
+    
+    -moz-background-attachment: fixed;
+    -moz-background-position: center;
+    -moz-background-repeat: no-repeat;
+    -moz-background-size: cover;
+    -webkit-background-attachment: fixed;
+    -webkit-background-position: center;
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.parallax-2 {
+    height: 200px;
+}
+.parallax-3 {
+    height: 300px;
+}
+.parallax-5 {
+    height: 500px;
+}
+.parallax-7 {
+    height: 700px;
+}
+.parallax-9 {
+    height: 900px;
+}
+
+
+.ta-c {
+    text-align: center;
+}
+.ta-r {
+    text-align: right;
+}
+.ta-l {
+    text-align: left;
+}
+
+/* 
+@media all and (max-width: 900px) {
+     .parallax-5, .parallax-7 , .parallax-9 {
+        height: 900px;
+        width: 100vw;
+    background-image: url("../img/showcase_mob.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+
+    }
+} */
