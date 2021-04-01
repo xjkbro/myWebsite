@@ -29,7 +29,6 @@ body {
 }
 
 .showcase {
-    /* background-color: var(--primary-color); */
     color: #fff;
     height: 100vh;
     position: relative;
@@ -74,8 +73,6 @@ body {
     margin-top: 1rem;
     text-decoration: none;
     transition: opacity 1s ease-in;
-    /* border-radius: 10%;
-    background-color: var(--primary-color); */
 }
 
 div > a {
@@ -115,12 +112,6 @@ i:hover {
     padding: 0 0;
     margin: 0 1.1rem;
 }
-/* span:hover {
-    cursor: pointer;
-    transform: scale(2.3);
-    font-size: 1.1rem;
-    transition: ease-in 100ms;
-} */
 button:hover {
     transform: scale(1);
     transition: ease-in 100ms;
@@ -166,10 +157,6 @@ button:hover {
     .section-head {
         font-size: 2rem;
     }
-    /* p {
-        text-align: center;
-        font-size: 0.9rem !important;
-    } */
     .about-img {
         width: 300px;
         height: 300px;
@@ -194,7 +181,6 @@ button:hover {
     }
     .project-sect-part {
         text-align: left;
-        /* vertical-align: center; */
         padding: 20px 5px;
     }
     .about-sect-part > p {
@@ -225,7 +211,6 @@ button:hover {
     }
     .project-img {
         width: 35vw;
-        /* height: 300px; */
         object-fit: cover;
         margin: 20px;
         padding: 0;
@@ -239,7 +224,6 @@ button:hover {
     }
     .project-sect-part {
         text-align: left;
-        /* vertical-align: center; */
         padding: 10px;
         width: 50vw;
     }
