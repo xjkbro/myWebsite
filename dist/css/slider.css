@@ -22,7 +22,7 @@ p {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1em;
+    padding: 20px 0;
 }
 
 .text-ctn {
