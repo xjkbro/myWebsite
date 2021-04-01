@@ -46,15 +46,56 @@
           <div id="content-about" class="slide">
               <div class="pg-ctn">
                   <h1 class="section-head text-shad">About Me</h1>
-                  <p id="typed-about" class="text-shad"></p>
-                  <a href="./files/resume2020_display.pdf" class="bttn text-shad">See My Full Resume</a>
-              </div>
+                  <div class="about-sect">
+                      <img class="about-img about-sect-part" src="img/biography.jpg" alt="">
+                    <div class="about-sect-part">
+                      <p id="typed-about" class="text-shad"></p>
+                      <a href="./files/resume2020_display.pdf" class="bttn text-shad">See My Full Resume</a>
+                    </div>
+                  </div>
+                </div>
           </div>
           <!-- Projects -->
           <div id="content-projects" class="slide">
               <div class="pg-ctn">
                   <h1 class="section-head text-shad">Projects</h1>
-                  <div class="row">
+                  <div id="timeline-content">                          
+                    <ul class="timeline tw-shadow-lg">
+                      <li class="event" data-date="August 2020 - February 2021">
+                        <h3>Nucamp Bootcamp</h3>
+                        <strong>Full Stack Developer Student</strong>
+                        <p class="desc">Nucamp Bootcamp's Full Stack Web Development Course for Bootstrap, React, React Native, NodeJS, ExpressJS and MongoDB. </p>
+                        <a href="#" class="bttn" > Certificate of Completion Here</a>
+                      </li>
+                      <li class="event" data-date="November 2020 - February 20201">
+                        <h3>RoyaltyBusayo</h3>
+                        <strong>Front End Developer Intern</strong>
+                        <p class="desc">Real world instructions and independant work</p>    
+                      </li>
+                      <li class="event" id="date" data-date="August 2013 - December 2019">
+                        <h3>University of Nevada Las Vegas</h3>
+                        <strong>Bachelors of Science in Computer Science</strong>
+                        <p class="desc">Valued important Object oriented techniques, understood the foundations of Computer Science, collaborated with peers in semester long projects, studied three dimensional graphical theories and artifical intelligence and practiced C++, C# and Java.</p>    
+                      </li>
+                      
+                      <li class="event" data-date="October 2017 - Present">
+                        <h3>Rue21</h3>
+                        <strong>Sales Associate/Part-Time Assistant Store Manager/Stock Manager</strong>
+                        <p class="desc">Overviewed and lead the team with quality service and friendly interactions.</p>
+                      </li>
+                      <li class="event" data-date="October 2018 - March 2019">
+                        <h3>Banana Republic</h3>
+                        <strong>Brand Ambassador/Stock Associate</strong>
+                        <p class="desc">Lead stock team with shippment and processed inventory.</p>
+                      </li>
+                      <li class="event" data-date="August 2009 - June 2013">
+                        <h3>Cheyenne High School</h3>
+                        <strong>Honors Graduate</strong>
+                        <p class="desc">Built a foundaiton of Computer Science with entry level class and the following year was introduced with graphical uses and took on the AP exam. </p>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- <div class="row">
                       <div class="col-5 m-2 tw-flex tw-bg-white tw-text-gray-500 tw-shadow-lg tw-rounded-lg">
                           <div class="tw-flex-none tw-w-48 tw-relative">
                             <img src="./img/blackjackv1.png" alt="" class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover" />
@@ -137,7 +178,7 @@
                             </p>
                           </form>
                         </div>
-                  </div>
+                  </div> -->
               </div>
           </div>
           <!-- Experience -->
@@ -203,54 +244,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="js/scripts.js"></script>
+    <!-- <script src="js/scripts.js"></script> -->
     <script>
         AOS.init();
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+          anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+          });
         });
-    });
     let myName = new Typewriter("#typed-name", {
-    autoStart: true,
-    delay: 75,
-});
-myName.typeString("Jason-Kyle De Lara").start();
+      autoStart: true,
+      delay: 75,
+      });
+    myName.typeString("Jason-Kyle De Lara").start();
 
-let title = new Typewriter("#typed-title", {
-    loop: true,
-    delay: 85,
-});
+    let title = new Typewriter("#typed-title", {
+        loop: true,
+        delay: 85,
+    });
 
-title
-    .pauseFor(2100)
-    .typeString("Creator")
-    .pauseFor(500)
-    .deleteAll()
-    .typeString("Gym Rat")
-    .pauseFor(500)
-    .deleteAll()
-    .typeString("Foodie")
-    .pauseFor(500)
-    .deleteAll()
-    .typeString("Full Stack Web Developer")
-    .pauseFor(5000)
-    .start();
+    title
+        .pauseFor(2100)
+        .typeString("Creator")
+        .pauseFor(500)
+        .deleteAll()
+        .typeString("Gym Rat")
+        .pauseFor(500)
+        .deleteAll()
+        .typeString("Foodie")
+        .pauseFor(500)
+        .deleteAll()
+        .typeString("Full Stack Web Developer")
+        .pauseFor(5000)
+        .start();
 
-let about = new Typewriter("#typed-about", {
-    autoStart: true,
-    delay: 50,
-});
-about
-    .pauseFor(1000)
-    .typeString("Hello, I'm Jason and I like to create things. ")
-    .pauseFor(1000)
-    .typeString("Let's Build Something together! =)")
-    .start();
+    let about = new Typewriter("#typed-about", {
+        autoStart: true,
+        delay: 50,
+    });
+    about
+        .pauseFor(1000)
+        .typeString("Hello, I'm Jason and I like to create things. ")
+        .pauseFor(1000)
+        .typeString("Let's Build Something together! =)")
+        .start();
 
     </script>
   </body>
