@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Chivo:300,300i,400,400i,700,700i,900,900i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+    --text-color: rgb(215, 215, 215);
+}
 body {
     background: #252827;
     font-size: 16px;
@@ -65,7 +68,7 @@ strong {
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     background: rgba(0, 0, 0, 0.322);
-    color: rgba(255, 255, 255, 1);
+    color: var(--text-color);
     font-family: "Montserrat", sans-serif;
     margin: 10px auto;
     letter-spacing: 0.5px;

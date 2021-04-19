@@ -3,6 +3,8 @@
 :root {
     --primary-color: rgba(190, 182, 63, 0.226);
     --overlay-color: rgba(255, 127, 80, 0.479);
+    --text-color: rgb(215, 215, 215);
+    --bg-color: rgba(24, 24, 24, 0.7);
     --menu-speed: 0.75s;
 }
 
@@ -12,6 +14,10 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+html,
+body {
+    color: var(--text-color) !important;
 }
 body {
     line-height: 1.4;
@@ -23,13 +29,14 @@ body {
     padding: 0 3rem;
 }
 .bttn:hover {
-    color: white;
+    color: var(--text-color);
     background-color: var(--overlay-color);
     opacity: 0.7;
 }
 
 .showcase {
-    color: #fff;
+    background-color: var(--bg-color);
+    /* color: #fff; */
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -39,6 +46,7 @@ body {
 .showcase:before {
     content: "";
     background: url("../img/showcase.jpg") no-repeat center center/cover;
+    /* background-color: var(--bg-color); */
     position: absolute;
     top: 0;
     left: 0;
@@ -68,7 +76,7 @@ body {
 .bttn {
     display: inline-block;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     padding: 0.75rem 0.75rem;
     margin-top: 1rem;
     text-decoration: none;
@@ -76,10 +84,13 @@ body {
 }
 
 div > a {
-    color: white;
+    color: var(--text-color);
 }
 div > a:hover {
-    color: white;
+    color: var(--text-color);
+}
+button > a {
+    color: var(--text-color);
 }
 div > a > i {
     line-height: 3 !important;
@@ -121,7 +132,7 @@ button:hover {
     transition: ease-in 100ms;
 }
 .text-shad {
-    text-shadow: 2px 1px 7px #272727;
+    text-shadow: 0px 0px 0px #272727;
 }
 
 .about-img {
