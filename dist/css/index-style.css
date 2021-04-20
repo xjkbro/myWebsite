@@ -19,6 +19,7 @@ html,
 body {
     color: var(--text-color) !important;
 }
+
 body {
     line-height: 1.4;
 }
@@ -83,13 +84,10 @@ body {
     transition: opacity 1s ease-in;
 }
 
-div > a {
-    color: var(--text-color);
-}
+button > a,
+button > a:hover,
+div > a,
 div > a:hover {
-    color: var(--text-color);
-}
-button > a {
     color: var(--text-color);
 }
 div > a > i {
