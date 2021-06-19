@@ -73,6 +73,7 @@ body {
     object-fit: cover;
     opacity: 0.3;
 }
+
 .overlay {
     position: absolute;
     top: 0;
