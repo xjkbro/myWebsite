@@ -36,7 +36,7 @@ body {
 }
 
 .showcase {
-    /* background-color: var(--bg-color); */
+    background-color: var(--bg-color);
     /* color: #fff; */
     height: 100vh;
     position: relative;
@@ -46,7 +46,7 @@ body {
 
 .showcase:before {
     content: "";
-    /* background: url("../img/showcase.jpg") no-repeat center center/cover; */
+    background: url("../img/showcase.jpg") no-repeat center center/cover;
     /* background-color: var(--bg-color); */
     position: absolute;
     top: 0;
@@ -64,7 +64,7 @@ body {
     text-align: center;
     height: 100%;
 }
-.showcase video {
+/* .showcase video {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.849);
     mix-blend-mode: overlay;
-}
+} */
 
 .title-head {
     font-size: 4rem;
