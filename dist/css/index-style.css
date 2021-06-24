@@ -159,8 +159,30 @@ button:hover {
     margin: 20px;
     padding: 0;
     box-shadow: 4px 4px 12px #111;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     overflow: hidden;
+}
+.show-mobile {
+    visibility: hidden;
+    -webkit-animation: pulse 1.5s infinite ease-in-out;
+    -o-animation: pulse 1.5s infinite ease-in-out;
+    -ms-animation: pulse 1.5s infinite ease-in-out;
+    -moz-animation: pulse 1.5s infinite ease-in-out;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+.show-desktop {
+    position: fixed;
+    bottom: 50px;
+    opacity: 0.5;
+
+    -webkit-animation: pulse 1.5s infinite ease-in-out;
+    -o-animation: pulse 1.5s infinite ease-in-out;
+    -ms-animation: pulse 1.5s infinite ease-in-out;
+    -moz-animation: pulse 1.5s infinite ease-in-out;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+.show-desktop > p {
+    font-size: 14px;
 }
 
 @media all and (max-width: 900px) {
@@ -197,7 +219,7 @@ button:hover {
     }
     .about-sect,
     .about-sect-part {
-        margin: 20px auto;
+        margin: 30px auto;
         text-align: center;
     }
     .project-img {
@@ -221,22 +243,46 @@ button:hover {
         text-align: left;
         font-size: 0.8rem;
     }
+    .show-mobile {
+        visibility: visible;
+        position: fixed;
+        bottom: 30px;
+        opacity: 0.5;
+    }
+    .show-mobile > p {
+        text-align: center;
+        margin: 0;
+    }
+    .show-desktop {
+        visibility: hidden;
+    }
+    .hide {
+        display: none;
+    }
+    .contact {
+        font-size: 10px;
+    }
 }
 @media all and (min-width: 900px) {
     .about-sect {
         display: flex;
         margin: 20px;
-        padding: 10px;
     }
     .about-sect-part {
         margin: auto;
-        text-align: center;
+        text-align: left;
         vertical-align: center;
+        padding-left: 30px;
     }
     .about-sect-part > p {
         width: 50vw;
-        padding: 0px 30px;
+        margin: 1.5rem;
     }
+    .about-sect-part > a {
+        position: relative;
+        left: 10px;
+    }
+
     .project-img {
         width: 45vw;
         object-fit: cover;
@@ -255,10 +301,37 @@ button:hover {
         padding: 10px;
         width: 50vw;
     }
-    .about-sect-part > p {
-        padding: 0px 30px;
-    }
     .project-desc {
         font-size: 0.9rem;
+    }
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale(0.97);
+        opacity: 0.7;
+    }
+    50% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(0.97);
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.97);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.97);
+        opacity: 0.7;
     }
 }

@@ -30,12 +30,12 @@ app.use(express.json());
 // }
 
 // Possible no use with mailgun bounces to avoid spam.
-app.use(
-    rateLimit({
-        windowMs: 12 * 60 * 60 * 1000, //limit a submission every 12 hrs
-        max: 4,
-    })
-);
+// app.use(
+//     rateLimit({
+//         windowMs: 4 * 60 * 60 * 1000, //limit a submission every 12 hrs
+//         max: 4,
+//     })
+// );
 
 app.get("/error", (req, res) => {
     res.sendFile(path.join(__dirname, "dist", "error.html"));

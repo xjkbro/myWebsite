@@ -10,13 +10,14 @@
       <title>Jason-Kyle De Lara</title>
       <!-- <link rel="stylesheet" href="css/brochure-style.css"> -->
       <!-- <link rel="stylesheet" href="css/about-style.css"> -->
-      <!-- <link rel="stylesheet" href="css/index-menu.css"> -->
+      <link rel="stylesheet" href="css/modal.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
       <link rel="stylesheet" href="css/index-style.css">
       <link rel="stylesheet" href="css/slider.css">
       <link rel="stylesheet" href="css/tailwind.css">
       <link rel="stylesheet" href="css/timeline.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
       <link rel="shortcut icon" href="img/favicon.ico" type="image/ico">
@@ -25,6 +26,12 @@
     <div class="showcase">
       <!-- <video src="drive.mp4" muted loop autoplay></video>
         <div class="overlay"></div> -->
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+      </div>
       <!-- Navigation -->
       <div class="navBadges">
           <button id="showHome" class="btn   text-shad" ><a href="#content-home" class="text-decoration-none  ">Home</a></button>
@@ -32,7 +39,9 @@
           <button id="showProjects" class="btn   text-shad" ><a href="#content-projects" class="text-decoration-none  ">Projects</a></button>
           <button id="showExperience" class="btn   text-shad" ><a href="#content-experience" class="text-decoration-none  ">Experience</a></button>
           <button id="showConnect" class="btn   text-shad" ><a href="#content-connect" class="text-decoration-none  ">Connect</a></button>
-          <button class="btn   text-shad"><a class="  text-decoration-none " href="contact.html">Contact</a></button>
+          <button id="showContact" class="btn   text-shad" ><a href="#content-contact" class="text-decoration-none  ">Contact</a></button>
+
+          <!-- <button class="btn   text-shad"><a class="  text-decoration-none " href="contact.html">Contact</a></button> -->
       </div>
 
       <!-- Content Container -->
@@ -42,14 +51,22 @@
               <div class="pg-ctn">
                   <h1 id="typed-name" class="title-head text-shad">Jason-Kyle De Lara</h1>
                   <p id="typed-title" class="text-shad"></p>
+                  <div class="show-mobile">
+                    <p> Swipe Left </p>
+                    <p><i class="fas fa-arrow-left"></i></p>
+                  </div> 
+                  <div class="show-desktop">
+                    <p> Use left or right arrow keys or menu up top </p>
+                  </div> 
               </div>
+              
           </div>
           <!-- About -->
           <div id="content-about" class="slide">
               <div class="pg-ctn">
                   <h1 class="section-head text-shad">About Me</h1>
                   <div class="about-sect">
-                      <img class="about-img about-sect-part" src="img/biography.jpg" alt="">
+                      <img class="about-img about-sect-part" src="img/IMG_5033 copy.JPG" alt="">
                     <div class="about-sect-part">
                       <p id="typed-about" class="text-shad"></p>
                       <a href="./files/resume2020_display.pdf" class="bttn text-shad">See My Full Resume</a>
@@ -65,29 +82,31 @@
                     <ul class="timeline tw-shadow-lg">
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/maxreps.gif" alt="">
+                          <img class="project-img modal-img" src="img/maxreps.gif" alt="">
                           <div class="project-sect-part">
                             <h3>MaxReps</h3>
                             <strong>Fitness Tracker Start Up</strong>
                             <p class="project-desc">My feature project that I wish to build as my skills grow. MaxReps is a MERN stack web application that is meant to help fitness enthusiast to record their fitness goals while in the gym. Users are able to create an account, login, and view their workouts that they recorded by date. Please feel free to try out the application. If you don't want to create an account, here is a test account you can use. <br/> Email: test@maxreps.com <br/> Password: 123  </p>
+                            <a href="https://github.com/xjkbro/MaxReps" class="text-center bttn text-shad">Github</a>
                             <a href="http://maxreps.herokuapp.com/" class="text-center bttn text-shad">Demo</a>
                           </div>
                         </div>
                       </li>
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/teaera.jpg" alt="">
+                          <img class="project-img modal-img" src="img/teaera.jpg" alt="">
                           <div class="project-sect-part">
                             <h3>Tea Era</h3>
                             <strong>Nucamp Personal Project</strong>
                             <p class="project-desc">A personal project for an imaginary tea shop to use the skills we acquired during the bootcamp. With the demo in the link below, includes the use of many Bootstrap elements along with React, React Strap and Animations. In the bootcamp, we were also taught to tranform our current application and make it a mobile application using React Native. </p>
+                            <a href="https://github.com/xjkbro/tea-era-react" class="text-center bttn text-shad">Github</a>
                             <a href="https://teaera.netlify.app" class="text-center bttn text-shad">Demo</a>
                           </div>
                         </div>
                       </li>
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/quark.PNG" alt="">
+                          <img class="project-img modal-img" src="img/quark.PNG" alt="">
                           <div class="project-sect-part">
                             <h3>Quark</h3>
                             <strong>Particle Engine for Language Quorum</strong>
@@ -97,38 +116,43 @@
                               functional library with particle and particle emitter properites and a particle editor that
                               creates and saves properties of a particle via JSON. Unfortunately, we did not win the competition we did get approved to include the library to our professor's language.</p>
                             <!-- <a href="http://maxreps.herokuapp.com/" class="text-center bttn text-shad">See My Full Resume</a> -->
+                            <a href="https://github.com/xjkbro/Quorum-Particle-Engine" class="text-center bttn text-shad">Github</a>
+
                           </div>
                         </div>
                       </li>
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/tpg.png" alt="">
+                          <img class="project-img modal-img" src="img/tpg.png" alt="">
                           <div class="project-sect-part">
                             <h3>Theory of Practical Gaming</h3>
                             <strong>e-Sports Gaming Organization</strong>
                             <p class="project-desc"> A NextJS project that shows off my UI Design ability and my ability to transform an idea into a reality. This is one of many mock ups of a design for the esports organization I wanted to start a while back with friends. It features many interesting things about the company, the teams, an ecommerce section to sell merch and a partnership page to allow applications to join the team. The website is still a work in progress but will soon be live and will be used officially for the TPG website.</p>
+                            <a href="https://github.com/xjkbro/tpg-next" class="text-center bttn text-shad">Github</a>
                             <a href="https://tpg-next.vercel.app/" class="text-center bttn text-shad">Demo</a>
                           </div>
                         </div>
                       </li>
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/netflixclone.png" alt="">
+                          <img class="project-img modal-img" src="img/netflixclone.png" alt="">
                           <div class="project-sect-part">
                             <h3>Netflix Clone</h3>
                             <strong>Netflix Clone</strong>
                             <p class="project-desc"> A ReactJS, Redux, and Firebase project that resembles everyones favorite movie streaming service Netflix. The app is part of a course to learn and produce full scale applications with a front end element of react, redux with managing user data, firebase for backend and deployment. Obviously, it will not have video playback functionality but it behaves like Netflix's official website.</p>
+                            <a href="https://github.com/xjkbro/netflix-clone" class="text-center bttn text-shad">Github</a>
                             <a href="https://netflix-clone-aab10.web.app" class="text-center bttn text-shad">Demo</a>
                           </div>
                         </div>
                       </li>
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/airbnb.png" alt="">
+                          <img class="project-img modal-img" src="img/airbnb.png" alt="">
                           <div class="project-sect-part">
                             <h3>Airbnb</h3>
                             <strong>Airbnb Clone with SanityIO, NextJS and GoogleMapsAPI</strong>
                             <p class="project-desc">My first JAMStack approach. Project was a lot of fun trying to work with a powerful headless CMS other than Wordpress. I got to use NextJS, framework I'm really starting to get used to for such a unique build. All elements were planned based on how the data is structured in the sanity studio by creating schemas. From there, I created the front end and developed the elements that make the icon Airbnb loadout with a cluster map with the help of the Google Maps API</p>
+                            <a href="https://github.com/xjkbro/airbnb-clone" class="text-center bttn text-shad">Github</a>
                             <a href="https://airbnb-clone-mauve.vercel.app/" class="text-center bttn text-shad">Demo</a>
                             <a href="https://airbnb-clone-xjkbro.sanity.studio/" class="text-center bttn text-shad">Sanity.io Dashboard</a>
                           </div>
@@ -136,18 +160,19 @@
                       </li>
                       <li class="event" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/linkup.PNG" alt="">
+                          <img class="project-img modal-img" src="img/linkup.PNG" alt="">
                           <div class="project-sect-part">
                             <h3>LinkUP</h3>
                             <strong>WhatsApp Clone</strong>
                             <p class="project-desc"> A NextJS/Firebase project that allows users who log in using their Google accounts can instant message other users who log in using google. First time approaching a project using NextJS and Firebase. I learned a lot and can continue to improve aspects of the app. There's a lot of room to turn the project into a full fledge everyday public application.</p>
+                            <a href="https://github.com/xjkbro/linkup" class="text-center bttn text-shad">Github</a>
                             <a href="https://linkup-theta.vercel.app/" class="text-center bttn text-shad">Demo</a>
                           </div>
                         </div>
                       </li>
                       <li class="event" id="date" data-date="">
                         <div class="project-sect">
-                          <img class="project-img" src="img/blackjackv2.png" alt="">
+                          <img class="project-img modal-img" src="img/blackjackv2.png" alt="">
                           <div class="project-sect-part">
                             <h3>Blackjack</h3>
                             <strong>Blackjack with interactive JS elements</strong>
@@ -156,6 +181,7 @@
                               Game is fully functional with rematch capabilities, score counter, hand count, and all Blackjack
                               functionalities. Game is fair with every game starting with a newly shuffled deck. Currently
                               remaking this game with ReactJS. </p>
+                            <a href="https://github.com/xjkbro/Blackjack" class="text-center bttn text-shad">Github</a>
                             <a href="https://xjkbro.github.io/Blackjack/" class="text-center bttn text-shad">Demo</a>
                           </div>
                         </div>    
@@ -180,7 +206,7 @@
                           <p class="desc">Nucamp Bootcamp's Full Stack Web Development Course for Bootstrap, React, React Native, NodeJS, ExpressJS and MongoDB. </p>
                           <a href="#" class="bttn" > Certificate of Completion Here</a>
                         </li>
-                        <li class="event" data-date="November 2020 - February 20201">
+                        <li class="event" data-date="November 2020 - February 2021">
                           <h3>RoyaltyBusayo</h3>
                           <strong>Front End Developer Intern</strong>
                           <p class="desc">Real world instructions and independant work</p>    
@@ -223,66 +249,102 @@
                   </div>
               </div>
           </div>
+          <!-- Contact Page -->
+          <div id="content-contact" class="slide">
+            <div class="pg-ctn">
+              <div class="container jumbotron contact">
+
+                <div class="display-2">
+                    Contact
+                </div>
+                <div class="sm">All inquiries will be redirected to inquiries@jkdelara.com. Please allow 1-2 days for me to get
+                    back to you.</div>
+                <div class="sm">You are allowed one request every 12 hours. Sorry for the inconvenience.</div>
+                <hr />
+                <form>
+                    <div class="row form-group">
+                        <div class="col">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" class="form-control" placeholder="John">
+                        </div>
+                        <div class="col">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email address</label>
+                        <input type="email" placeholder="name@example.com" class="form-control" id="emailAddress"
+                            aria-describedby="emailHelp" required>
+                        <small id="emailHelp" class="form-text text-muted hide">I will never share your email with anyone
+                            else. Will be used only to contact you back.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquirySelect">What's this about?</label>
+                        <select class="form-control" id="inquirySelect">
+                            <option>Want to work with me?</option>
+                            <option>Customer Service/Help</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subject">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageBody">Message: </label>
+                        <textarea class="form-control" id="messageBody" rows="3"></textarea>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="bttn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <!-- <script src="js/scripts.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+    <script src="js/scripts.js"></script>
     <script>
-        AOS.init();
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-          anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+        //contact scripts
+        $('form').on('submit', (e) => {
+        e.preventDefault();
+        const first = $('#firstName').val().trim();
+        const last = $('#lastName').val().trim();
+        const email = $('#emailAddress').val().trim();
+        const select = $('#inquirySelect').val().trim();
+        const subject = $('#subject').val().trim();
+        const message = $('#messageBody').val().trim();
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        const data = {
+            first,
+            last,
+            email,
+            select,
+            subject,
+            message
+        };
+        console.log(data);
+        $.post('/email', data)
+            .then(() => {
+                window.location.href = "/email/sent";
+            })
+            .catch(() => {
+                window.location.href = "/error";
             });
-          });
-        });
-    let myName = new Typewriter("#typed-name", {
-      autoStart: true,
-      delay: 75,
-      });
-    myName.typeString("Jason-Kyle De Lara").start();
 
-    let title = new Typewriter("#typed-title", {
-        loop: true,
-        delay: 85,
+
     });
-
-    title
-        .pauseFor(2100)
-        .typeString("Creator")
-        .pauseFor(500)
-        .deleteAll()
-        .typeString("Gym Rat")
-        .pauseFor(500)
-        .deleteAll()
-        .typeString("Foodie")
-        .pauseFor(500)
-        .deleteAll()
-        .typeString("Full Stack Web Developer")
-        .pauseFor(5000)
-        .start();
-
-    let about = new Typewriter("#typed-about", {
-        autoStart: true,
-        delay: 50,
-    });
-    about
-        .pauseFor(1000)
-        .typeString("Hello, I'm Jason and I like to create things. ")
-        .pauseFor(1000)
-        .typeString("With the help of VS Code, Chrome, and a scoop of preworkout,  I help transform businesses ideas into tangible full scale application. ")
-        .pauseFor(1000)
-        .typeString("Let's build something together! ")
-        .pauseFor(1000)
-        .typeString("=)")
-        .start();
-
     </script>
   </body>
 
