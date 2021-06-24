@@ -246,7 +246,7 @@ button:hover {
     .show-mobile {
         visibility: visible;
         position: fixed;
-        bottom: 30px;
+        bottom: 60px;
         opacity: 0.5;
     }
     .show-mobile > p {
