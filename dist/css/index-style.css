@@ -266,7 +266,7 @@ button:hover {
         padding-bottom: 8px;
     }
     #typed-about {
-        font-size: 0.65rem;
+        font-size: 12px;
     }
 }
 @media all and (min-width: 900px) {
