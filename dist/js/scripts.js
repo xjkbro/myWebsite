@@ -1,3 +1,4 @@
+
 AOS.init();
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -80,14 +81,14 @@ modal.onclick = function () {
 };
 
 //contact scripts
-$("form").on("submit", (e) => {
+$('form').on('submit', (e) => {
     e.preventDefault();
-    const first = $("#firstName").val().trim();
-    const last = $("#lastName").val().trim();
-    const email = $("#emailAddress").val().trim();
-    const select = $("#inquirySelect").val().trim();
-    const subject = $("#subject").val().trim();
-    const message = $("#messageBody").val().trim();
+    const first = $('#firstName').val().trim();
+    const last = $('#lastName').val().trim();
+    const email = $('#emailAddress').val().trim();
+    const select = $('#inquirySelect').val().trim();
+    const subject = $('#subject').val().trim();
+    const message = $('#messageBody').val().trim();
 
     const data = {
         first,
@@ -95,14 +96,16 @@ $("form").on("submit", (e) => {
         email,
         select,
         subject,
-        message,
+        message
     };
     console.log(data);
-    $.post("/email", data)
+    $.post('/email', data)
         .then(() => {
             window.location.href = "/email/sent";
         })
         .catch(() => {
             window.location.href = "/error";
         });
+
+
 });

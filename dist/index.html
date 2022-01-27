@@ -74,7 +74,7 @@
                       <img class="about-img about-sect-part" src="img/IMG_5033 copy.JPG" alt="">
                     <div class="about-sect-part">
                       <p id="typed-about" class="text-shad"></p>
-                      <a href="./files/resume_display.pdf" class="bttn text-shad resume">See My Full Resume</a>
+                      <a href="./files/resume2022a.pdf" class="bttn text-shad resume">See My Full Resume</a>
                     </div>
                   </div>
                 </div>
@@ -94,6 +94,30 @@
                             <p class="project-desc">Because of the struggle of landing a job in the web development industry, I thought why don't I try and express myself and teach people programming. So I thought of different ways to approach what I want to do and I have finally found a way to produce content and a way to advertise and market my brand. I thought it was best to create a website that would have the intention for actual real world use by using the Headless CMS, SanityIO to process the different videos I will produce and create post everytime I have a new video or course up. I want to apply and use this to feature other interesting things in my life such as fitness and fishkeeping. The JAMStack project was done with NextJS, TailwindCSS, Styled Components and SanityIO. </p>
                             <a href="https://github.com/xjkbro/devflow" class="text-center bttn text-shad">Github</a>
                             <a href="https://www.thedevflow.com/" class="text-center bttn text-shad">Website</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="event" data-date="">
+                        <div class="project-sect">
+                          <img class="project-img modal-img" src="img/icpdas.png" alt="">
+                          <div class="project-sect-part">
+                            <h3>ICP DAS USA Inc</h3>
+                            <strong>PHP and custom CMS based B2B Commerce Website</strong>
+                            <p class="project-desc">ICP DAS USA Inc is the website that I completely redesigned, optimized and manage day to day for my company. It's the company's official website and owns many other small businesses with websites that I also manage. This website in particular is a PHP based website build in 2007 with a custom CMS to hold content for our 2000+ products that we offer, newsletters, white papers, articles, support software and drivers, webinars, etc. The website has had many iterations of changes over the years and recently, the new design changes were done by me. </p>
+                            <!-- <a href="https://github.com/xjkbro/devflow" class="text-center bttn text-shad">Github</a> -->
+                            <a href="https://www.icpdas-usa.com/" class="text-center bttn text-shad">Website</a>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="event" data-date="">
+                        <div class="project-sect">
+                          <img class="project-img modal-img" src="img/icpdas-remodel.png" alt="">
+                          <div class="project-sect-part">
+                            <h3>ICP DAS USA Inc Remodel</h3>
+                            <strong>A NextJS and Strapi remake of ICP DAS USA.</strong>
+                            <p class="project-desc"> With the company looking to grow, continue to expand it's content base, it's important to look at how we can improve the performace of the website and what better what that to implement incremental static site generation for ICP DAS USA Inc. The site is still a work in progress.</p>
+                            <a href="https://github.com/xjkbro/nextjs-icp" class="text-center bttn text-shad">Github</a>
+                            <a href="https://nextjs-icp.vercel.app/" class="text-center bttn text-shad">Website</a>
                           </div>
                         </div>
                       </li>
@@ -233,7 +257,7 @@
                         <li class="event" data-date="September 2021 - Present">
                           <h3>ICP DAS USA Inc</h3>
                           <strong>Web Developer/Manager</strong>
-                          <p class="desc">Designing responsive and optimized web pages and scripts. Work with the marketing team to incorporate elements to improve sales and customer engagement on website. Mentor and collaborate with part-time web developers. Handle various projects for the company’s other websites.</p>
+                          <p class="desc">Designing responsive and optimized web pages and scripts. Work with the marketing team to incorporate elements to improve sales and customer engagement on website. Mentor and collaborate with other developers. Handle various projects for the company’s other websites.  Worked independently for other various projects such as a forum, multiple WordPress sites, NodeJS based CMS, etc.</p>
                         </li>
                         <li class="event" data-date="August 2020 - February 2021">
                           <h3>Nucamp Bootcamp</h3>
@@ -350,121 +374,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-    <!-- <script src="js/scripts.js"></script> -->
-    
-    
-    <script>
-      AOS.init();
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-              e.preventDefault();
-
-              document.querySelector(this.getAttribute("href")).scrollIntoView({
-                  behavior: "smooth",
-              });
-          });
-      });
-      let myName = new Typewriter("#typed-name", {
-          autoStart: true,
-          delay: 75,
-      });
-      myName.typeString("Jason-Kyle De Lara").start();
-
-      let title = new Typewriter("#typed-title", {
-          loop: true,
-          delay: 85,
-      });
-
-      title
-          .pauseFor(2100)
-          .typeString("Creator")
-          .pauseFor(500)
-          .deleteAll()
-          .typeString("Gym Rat")
-          .pauseFor(500)
-          .deleteAll()
-          .typeString("Foodie")
-          .pauseFor(500)
-          .deleteAll()
-          .typeString("Full Stack Web Developer")
-          .pauseFor(5000)
-          .start();
-
-      let about = new Typewriter("#typed-about", {
-          autoStart: true,
-          delay: 50,
-      });
-      about
-          .pauseFor(1000)
-          .typeString("Hello, I'm Jason and I like to create things. ")
-          .pauseFor(1000)
-          .typeString(
-              "With the help of VS Code, Chrome, and a scoop of preworkout,  I help transform businesses ideas into tangible full scale application. "
-          )
-          .pauseFor(1000)
-          .typeString("Let's build something together! ")
-          .pauseFor(1000)
-          .typeString("=)")
-          .start();
-
-      // MODAL scripts
-      var modal = document.getElementById("myModal");
-      // Get the image and insert it inside the modal - use its "alt" text as a caption
-      var imgs = document.getElementsByClassName("modal-img");
-      var modalImg = document.getElementById("img01");
-      var captionText = document.getElementById("caption");
-
-      for (var i = 0; i < imgs.length; i++) {
-          imgs[i].addEventListener("click", function (event) {
-              console.log(event.target);
-              modal.style.display = "block";
-              modalImg.src = this.src;
-              captionText.innerHTML = this.alt;
-          });
-      }
-
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-          modal.style.display = "none";
-      };
-
-      modal.onclick = function () {
-          modal.style.display = "none";
-      };
-
-              //contact scripts
-              $('form').on('submit', (e) => {
-              e.preventDefault();
-              const first = $('#firstName').val().trim();
-              const last = $('#lastName').val().trim();
-              const email = $('#emailAddress').val().trim();
-              const select = $('#inquirySelect').val().trim();
-              const subject = $('#subject').val().trim();
-              const message = $('#messageBody').val().trim();
-
-              const data = {
-                  first,
-                  last,
-                  email,
-                  select,
-                  subject,
-                  message
-              };
-              console.log(data);
-              $.post('/email', data)
-                  .then(() => {
-                      window.location.href = "/email/sent";
-                  })
-                  .catch(() => {
-                      window.location.href = "/error";
-                  });
-
-
-          });
-    </script>
+    <script src="js/scripts.js?v=1.0"></script>
   </body>
 
 </html>
