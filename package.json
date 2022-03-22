@@ -6,6 +6,8 @@
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "node server.js",
+    "webp": "node webp.js",
+    "build-webp": "imagemin dist/img/* --out-dir=dist/build/img/ --plugin.webp.quality=60",
     "build": "nodem ."
   },
   "repository": {
@@ -24,6 +26,9 @@
     "express": "^4.17.1",
     "express-rate-limit": "^5.1.1",
     "gh-pages": "^2.2.0",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-webp": "^7.0.0",
     "nodemailer": "^6.4.4",
     "nodemailer-mailgun-transport": "^2.0.0",
     "typewriter-effect": "^2.17.0"
