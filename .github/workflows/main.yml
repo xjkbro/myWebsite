@@ -14,4 +14,4 @@ jobs:
         server: ftp.jkbro.tech
         username: ${{secrets.ftp_username}}
         password: ${{ secrets.ftp_password }}
-        server-dir: /public_html/jkdelara
+        server-dir: /public_html/jkdelara/
