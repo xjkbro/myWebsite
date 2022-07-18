@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "webp": "node webp.js",
-    "build-webp": "imagemin dist/img/* --out-dir=dist/build/img/ --plugin.webp.quality=60"
+    "build-webp": "imagemin dist/img/* --out-dir=dist/build/img/ --plugin.webp.quality=60",
+    "build": "imagemin dist/img/* --out-dir=dist/build/img/ --plugin.webp.quality=60"
   },
   "repository": {
     "type": "git",
