@@ -2,4 +2,3 @@ node_modules
 .env
 .now
 .htaccess
-package-lock.json
