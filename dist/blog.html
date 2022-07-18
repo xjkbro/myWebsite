@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description"
+        content="Jason-Kyle De Lara, A Full-Stack Developer based in Las Vegas, NV. I help transform businesses ideas into tangible full scale application. " />
+    <meta name="keywords"
+        content="HTML,CSS,JavaScript,ES6,TailwindCSS,Bootstrap,React,ReactJS,Redux,Context API, Next,NextJS,Vercel,Netlify,Firebase,Google Firebase,Sanity,SanityIO,GROQ,Deployment,Angular,Heroku,git,github,nodejs,express,expressjs,npm,yarn,php,C++,c#,mongodb,nosql,sql,mysql,api,business,apps,application,projects,ios,mobile,landing pages,website" />
+    <meta name="author" content="Jason-Kyle De Lara" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jason-Kyle De Lara - Developer, Creator, Initiator</title>
+    <meta property="og:site_name" content="jkdelara" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="robots" content="INDEX, FOLLOW" />
+    <!-- <link rel="stylesheet" href="css/brochure-style.css"> -->
+    <!-- <link rel="stylesheet" href="css/about-style.css"> -->
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+        integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="css/tailwind.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="build/img/favicon.ico" type="image/ico" />
+    <script>
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+    // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+    let article_id = params.article; // "some_value"
+    console.log(article_id)
+
+    </script>
+    <style>
+        #content > p {
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w-11/12 md:w-1/2 mx-auto my-32">
+        <div class="blog w-full">
+            <div id="title" class="font-bold text-[10rem] leading-none"></div>
+            <div class="mt-4">Posted: <span id="date" class=""></span></div>
+            <hr class="mb-4">
+            <div id="content" class=""></div>
+        </div>
+        <hr class="my-4">
+        <div id="title" class="font-bold text-[3rem]">Latest Posts</div>
+        <div id="latest-post" class="flex gap-2">
+            
+        </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="js/scripts.js?v=1.2"></script>
+    <script>
+        window.onload = function() {
+            fetchPosts();
+            loadLatestPosts();
+        }; 
+        async function fetchPosts() {
+            let response = await fetch(`https://jkdelara.herokuapp.com/api/posts/${article_id}?populate=%2A`);
+            let data = await response.json();
+            // console.log(data)
+            let post = {
+                id: data.data.id,
+                ...data.data.attributes
+            }
+            console.log(post)
+            $('#title').html(post.Title)
+            $('#date').html(post.Published)
+            $('#content').html(marked.parse(post.Content))
+        }
+        async function loadLatestPosts() {
+            let response = await fetch(`https://jkdelara.herokuapp.com/api/posts?populate=%2A`);
+            let data = await response.json();
+            console.log(data.data[0])
+            let arr = [
+                {
+                    id: data.data[0].id,
+                    ...data.data[0].attributes 
+                },
+                {
+                    id: data.data[1]?.id,
+                    ...data.data[1]?.attributes 
+                }
+            ]
+            console.log(arr)
+            arr.map(p => {
+                if(p.id != undefined){
+                    $('#latest-post').append(`
+                        <div class="w-1/2">
+                        <a href="blog.html?article=${p.id}"><span class="font-bold text-lg">${p.Title}</span></a>
+                        <p>${p.Content.substring(0,120)}..</p>
+                        </div>
+                    `);
+                }
+            })
+            // $('#title').html(post.Title)
+            // $('#date').html(post.Published)
+            // $('#content').html(post.Content)
+        }
+    </script>
+</body>
+
+</html>

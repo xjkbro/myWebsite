@@ -73,3 +73,61 @@ body {
 .darker {
     background-color: var(--color-darker);
 }
+
+
+#content-home{
+    background: linear-gradient(127deg, rgba(23, 23, 23, 0.994),rgba(227, 140, 86, 0.189)), url("../build/img/showcase.webp"), no-repeat;
+}
+#content-about{
+    background: linear-gradient(127deg, rgba(24, 24, 24, 0.82),rgba(245, 124, 48, 0.26)), url("https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"), no-repeat;
+}
+#content-projects{
+    background: linear-gradient(127deg, rgba(0, 0, 0, 0.601),rgba(227, 118, 51, 0.322)), url("https://images.unsplash.com/photo-1492551557933-34265f7af79e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"), no-repeat;
+}
+#content-experience{
+    background: linear-gradient(127deg, rgba(0, 0, 0, 0.82),rgba(227, 118, 51, 0.286)), url("https://images.unsplash.com/photo-1483356256511-b48749959172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"), no-repeat;
+}
+#content-blog{
+    background: linear-gradient(127deg, rgba(55, 55, 55, 0.82),rgba(252,112,25,.25)), url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1590&q=80"), no-repeat;
+}
+#content-connect{
+    background: linear-gradient(127deg, rgba(30, 30, 30, 0.82),rgba(252, 112, 25, 0.165)), url("https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"), no-repeat;
+}
+#content-contact{
+    background: linear-gradient(127deg, rgba(23, 23, 23, 0.994),rgba(227, 140, 86, 0.189)), url("../build/img/showcase.webp"), no-repeat;
+} 
+
+#content-home.slide, #content-about.slide, #content-projects.slide, #content-experience.slide, #content-blog.slide, #content-connect.slide, #content-contact.slide {
+    /* background: linear-gradient(127deg, rgba(55, 55, 55, 0.82),rgba(252,112,25,.25)), url("../build/img/showcase.webp"), no-repeat; */
+    background-size: cover;
+    background-position: center center;
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -3; */
+    /* opacity: 50%; */
+}
+/* .slide{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 100%;
+        width: 100%;
+        color: #eeeeee;
+        text-align: center;
+        display: table;
+} */
+
+/* .showcase:before {
+    content: "";
+    background: url("../build/img/showcase.webp") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+} */

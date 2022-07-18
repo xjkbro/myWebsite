@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
     --primary-color: rgba(190, 182, 63, 0.226);
     --overlay-color: rgba(255, 127, 80, 0.479);
+    --main-color: rgba(255, 127, 80, 1);
     --text-color: rgb(215, 215, 215);
     --bg-color: rgba(24, 24, 24, 0.7);
     --menu-speed: 0.75s;
@@ -11,6 +13,8 @@
 * {
     box-sizing: border-box;
     font-family: "Montserrat", "Roboto", sans-serif;
+    /* font-family: "Roboto","Montserrat", sans-serif; */
+    font-weight: 400;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -30,7 +34,7 @@ body {
     padding: 0 3rem;
 }
 .bttn:hover {
-    color: var(--text-color);
+    /* color: var(--text-color); */
     background-color: var(--overlay-color);
     opacity: 0.7;
 }
@@ -46,7 +50,7 @@ body {
 
 .showcase:before {
     content: "";
-    background: url("..build/img/showcase.webp") no-repeat center center/cover;
+    background: url("../build/img/showcase.webp") no-repeat center center/cover;
     /* background: url("../img/showcase.jpg") no-repeat center center/cover; */
     /* background-color: var(--bg-color); */
     position: absolute;
@@ -97,11 +101,12 @@ body {
 .bttn {
     display: inline-block;
     border: none;
-    color: var(--text-color);
+    color: white;
     padding: 0.75rem 0.75rem;
     margin-top: 1rem;
     text-decoration: none;
     transition: opacity 1s ease-in;
+    background-color: var(--main-color);
 }
 
 button > a,
@@ -125,12 +130,12 @@ i:hover {
 }
 .navBadges {
     position: fixed;
-    width: 650px;
+    width: 725px;
     height: 100px;
     top: 15%;
     left: 50%;
     margin-top: -100px; /* Negative half of height. */
-    margin-left: -325px; /* Negative half of width. */
+    margin-left: -370px; /* Negative half of width. */
 
     z-index: 2;
     text-align: center;
@@ -185,6 +190,9 @@ button:hover {
 .show-desktop > p {
     font-size: 14px;
 }
+.resume {
+    margin: auto;
+}
 
 @media all and (max-width: 900px) {
     div > a > i {
@@ -217,6 +225,7 @@ button:hover {
         box-shadow: 4px 4px 12px #111;
         border-radius: 50%;
         overflow: hidden;
+        margin: auto;
     }
     .about-sect,
     .about-sect-part {
@@ -239,6 +248,9 @@ button:hover {
     }
     .about-sect-part > a {
         margin: auto;
+    }
+    #typed-about > span {
+        font-size: 1rem;
     }
     .project-desc {
         text-align: left;
@@ -279,7 +291,9 @@ button:hover {
         margin: auto;
         text-align: left;
         vertical-align: center;
-        padding-left: 30px;
+        /* padding-left: 30px; */
+        flex-direction: column;
+        display: flex;
     }
     .about-sect-part > p {
         width: 50vw;
@@ -291,17 +305,19 @@ button:hover {
     }
 
     .project-img {
-        width: 45vw;
+        width: 300px;
+        height: 300px;
         object-fit: cover;
-        margin: 20px;
+        /* margin: 20px; */
         padding: 0;
         box-shadow: 4px 4px 12px #111;
-        /* border-radius: 50%; */
+        border-radius: 50%;
     }
     .project-sect {
         display: flex;
-        margin: 20px;
-        padding: 10px;
+        gap: 5px;
+        /* margin: 20px;
+        padding: 10px; */
     }
     .project-sect-part {
         text-align: left;
