@@ -89,7 +89,7 @@
             $('#content').html(marked.parse(post.Content))
         }
         async function loadLatestPosts() {
-            let response = await fetch(`https://jkdelara.herokuapp.com/api/posts?populate=%2A`);
+            let response = await fetch(`https://jkdelara.herokuapp.com/api/posts?populate=%2A&sort[0]=publishedAt%3Adesc`);
             let data = await response.json();
             console.log(data.data[0])
             let arr = [

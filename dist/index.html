@@ -528,7 +528,7 @@
                             fetchPosts()
                         }; 
                         async function fetchPosts() {
-                            let response = await fetch('https://jkdelara.herokuapp.com/api/posts?populate=%2A');
+                            let response = await fetch('https://jkdelara.herokuapp.com/api/posts?sort[0]=publishedAt%3Adesc');
                             let data = await response.json();
                             let posts = data.data;
                             console.log(posts)
