@@ -28,6 +28,7 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/ico" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6WEZPSVEZM"></script>
     <script>
@@ -41,7 +42,13 @@
 </head>
 
 <body>
-    <div class="showcase">
+    <div class="showcase" x-data="{ 
+        position: 0,
+        list: ['content-home','content-about','content-projects','content-experience','content-blog','content-connect'], 
+        showBar: false
+        }"
+        @keyup.right.outside="position = (position <= 5 ) ? position+1 : position " @keyup.left="position = (position >= 0 ) ? position-1 : position "
+        >
         <!-- <video src="drive.mp4" muted loop autoplay></video>
         <div class="overlay"></div> -->
         <!-- The Modal -->
@@ -51,23 +58,23 @@
             <div id="caption"></div>
         </div>
         <!-- Navigation -->
-        <div class="navBadges">
-            <button id="showHome" class="btn text-shad">
+        <div class="navBadges" x-on:click="console.log(position)" x-on:keyup="console.log(position)" >
+            <button id="showHome" class="btn text-shad" x-on:click="position = 0" @touchstart.passive="position = 0">
                 <a href="#content-home" class="text-decoration-none">Home</a>
             </button>
-            <button id="showAbout" class="btn text-shad">
+            <button id="showAbout" class="btn text-shad" x-on:click="position = 1" x-on:click="position = 1">
                 <a href="#content-about" class="text-decoration-none">About</a>
             </button>
-            <button id="showProjects" class="btn text-shad">
+            <button id="showProjects" class="btn text-shad" x-on:click="position = 2" x-on:click="position = 2">
                 <a href="#content-projects" class="text-decoration-none">Projects</a>
             </button>
-            <button id="showExperience" class="btn text-shad">
+            <button id="showExperience" class="btn text-shad" x-on:click="position = 3" x-on:click="position = 3">
                 <a href="#content-experience" class="text-decoration-none">Experience</a>
             </button>
-            <button id="showBlog" class="btn text-shad">
-                <a href="#content-blog" class="text-decoration-none">Notes</a>
+            <button id="showBlog" class="btn text-shad" x-on:click="position = 4" x-on:click="position = 4">
+                <a href="#content-blog" class="text-decoration-none" >Notes</a>
             </button>
-            <button id="showConnect" class="btn text-shad">
+            <button id="showConnect" class="btn text-shad" x-on:click="position = 5" x-on:click="position = 5">
                 <a href="#content-connect" class="text-decoration-none">Connect</a>
             </button>
             <!-- <button id="showContact" class="btn text-shad">
@@ -75,10 +82,11 @@
             </button> -->
 
             <!-- <button class="btn   text-shad"><a class="  text-decoration-none " href="contact.html">Contact</a></button> -->
+            <div ></div>
         </div>
 
         <!-- Content Container -->
-        <div class="slide-container" data-aos="zoom-out">
+        <div class="slide-container" data-aos="zoom-out" >
             <!-- Home -->
             <div id="content-home" class="slide">
                 <div class="pg-ctn">
@@ -581,9 +589,7 @@
                         <a href="https://www.linkedin.com/in/jkdelara/"><i class="fab fa-linkedin"></i></a>
                         <a href="https://www.instagram.com/jasonkyledelara/"><i class="fab fa-instagram"></i></a>
                         <a href="https://codepen.io/xjkbro"><i class="fab fa-codepen"></i></a>
-                        <a href="https://unsplash.com/@jkdelara"><i class="fa-brands fa-unsplash"></i></a>
                         <a href="./files/resume_display.pdf"><i class="fas fa-file-download"></i></a>
-
                     </div>
                 </div>
             </div>
