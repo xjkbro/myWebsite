@@ -27,6 +27,12 @@ body {
 body {
     line-height: 1.4;
 }
+.project-desc a {
+    color: var(--text-color)
+}
+.project-desc a:hover {
+    color: var(--text-color)
+}
 .container {
     max-width: 960px;
     margin: auto;
@@ -35,7 +41,8 @@ body {
 }
 .bttn:hover {
     /* color: var(--text-color); */
-    background-color: var(--overlay-color);
+    /* background-color: var(--overlay-color); */
+    text-decoration: underline;
     opacity: 0.7;
 }
 
@@ -106,7 +113,7 @@ body {
     margin-top: 1rem;
     text-decoration: none;
     transition: opacity 1s ease-in;
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
 }
 
 button > a,
@@ -305,7 +312,7 @@ button:hover {
     }
 
     .project-img {
-        width: 300px;
+        max-width: 300px;
         height: 300px;
         object-fit: cover;
         /* margin: 20px; */
