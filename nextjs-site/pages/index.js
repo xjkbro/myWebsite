@@ -14,18 +14,8 @@ export default function Home() {
       </Head>
       <Navigation />
       <Introduction />
-      <a href="/notes">Notes</a>
-      <h2 className="text-3xl font-bold underline"> Hello World!</h2>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
+        <a className="text-3xl font-black" href="/notes">Notes</a>
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>

@@ -3,10 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
+      'sm': '480px',
+      'md': '768px',
+      'lg': '976px',
+      'xl': '1440px',
+      '2xl': '1920px',
+      '3xl': '2560px' 
     },
     colors: {
     //   'primary': '#fb8500',
