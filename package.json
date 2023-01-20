@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "webp": "node webp.js",
-    "build-webp": "imagemin dist/img/* --out-dir=dist/build/img/ --plugin.webp.quality=60",
+    "build-webp": "imagemin img/* --out-dir=build/img/ --plugin.webp.quality=60",
     "build": "node -v",
     "dev" : "tailwindcss -i ./src/style.css -o ./css/styles.css --watch"
     
