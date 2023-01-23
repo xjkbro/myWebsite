@@ -4,8 +4,10 @@
 :root {
     --primary-color: rgba(190, 182, 63, 0.226);
     --overlay-color: rgba(255, 127, 80, 0.479);
+    /* --main-color: rgb(255, 225, 0); */
     --main-color: rgba(255, 127, 80, 1);
     --text-color: rgb(215, 215, 215);
+    --white: rgb(255, 255, 255);
     --bg-color: rgba(24, 24, 24, 0.7);
     --menu-speed: 0.75s;
 }
@@ -21,7 +23,9 @@
 }
 html,
 body {
-    color: var(--text-color) !important;
+    /* color: var(--text-color) !important; */
+    color: var(--white) !important;
+
 }
 
 body {
@@ -108,7 +112,7 @@ body {
 .bttn {
     display: inline-block;
     border: none;
-    color: white;
+    color: var(--white);
     padding: 0.75rem 0.75rem;
     margin-top: 1rem;
     text-decoration: none;
@@ -120,7 +124,7 @@ button > a,
 button > a:hover,
 div > a,
 div > a:hover {
-    color: var(--text-color);
+    color: var(--white);
 }
 div > a > i {
     line-height: 3 !important;
